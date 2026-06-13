@@ -1,0 +1,206 @@
+[
+  {
+    "customer_id": "DEMO-001",
+    "risk_level": "Critical",
+    "churn_probability": 0.9842,
+    "strategy_title": "Critical Retention: Premium Loyalty Save",
+    "personalized_offer": "Offer an immediate 20% discount on monthly charges (reducing from $95.50 to $76.40/month) when the customer commits to a 12-month contract. Additionally, provide a dedicated technical support line and schedule a network quality assessment within 48 hours to address their recent technical issues.",
+    "reasoning_summary": "Customer DEMO-001 assessed at 98.4% churn risk (Critical). Key risk factors: PaymentMethod Electronic check, Contract Two year, tenure. Context: Bronze tier, LTV=$219.65, 3 tickets, NPS=1/10. Strategy: Critical Retention: Premium Loyalty Save (policy: COMPLIANT).",
+    "recommended_actions": [
+      "Escalate to Senior Retention Specialist immediately",
+      "Apply 20% loyalty discount upon contract commitment",
+      "Schedule personal follow-up call within 24 hours",
+      "Flag account for executive review if customer declines first offer",
+      "Offer dedicated senior support line with extended hours"
+    ],
+    "estimated_retention_lift": "30-45%",
+    "urgency": "Immediate",
+    "reasoning_trace": [
+      {
+        "step_number": 1,
+        "phase": "Thought",
+        "content": "I need to evaluate churn risk for customer DEMO-001. They are on a Month-to-month contract with 2 months tenure, paying $95.50/month via Electronic check. Internet service: Fiber optic. I will call the Risk Predictor tool to get a quantitative churn score.",
+        "timestamp": "2026-06-12T21:26:39.482697"
+      },
+      {
+        "step_number": 2,
+        "phase": "Action",
+        "content": "Calling Risk Predictor tool with customer profile...",
+        "timestamp": "2026-06-12T21:26:39.483043"
+      },
+      {
+        "step_number": 3,
+        "phase": "Observation",
+        "content": "Risk Predictor returned: churn_probability=98.4%, risk_level=Critical, top_factors=[PaymentMethod Electronic check, Contract Two year, tenure], model=Logistic Regression (confidence: High).",
+        "timestamp": "2026-06-12T21:26:39.501654"
+      },
+      {
+        "step_number": 4,
+        "phase": "Thought",
+        "content": "The churn probability is 98.4% (>60% threshold). This is a Critical-risk customer. I need to understand WHY they might churn. Calling Context Retriever to fetch support tickets, contract status, and interaction history.",
+        "timestamp": "2026-06-12T21:26:39.502066"
+      },
+      {
+        "step_number": 5,
+        "phase": "Action",
+        "content": "Calling Context Retriever tool to fetch customer history...",
+        "timestamp": "2026-06-12T21:26:39.502529"
+      },
+      {
+        "step_number": 6,
+        "phase": "Observation",
+        "content": "Context retrieved: loyalty_tier=Bronze, lifetime_value=$219.65, account_status='Active - Open Tickets', payment_issues=2, NPS=1/10, tickets=3 recent tickets (2 unresolved). Notes: New customer -- still in onboarding phase; Senior citizen -- may prefer phone support over digital; Fiber optic user with recent technical issues -- prioritize network team; Month-to-month contract -- high flexibility, low switching cost; Payment issues detected (2 in last 90 days).",
+        "timestamp": "2026-06-12T21:26:39.503777"
+      },
+      {
+        "step_number": 7,
+        "phase": "Thought",
+        "content": "Now I have all the data. Generating a personalized retention strategy for this Critical-risk customer using the Retention Proposal Generator tool (rule-based reasoning).",
+        "timestamp": "2026-06-12T21:26:39.503966"
+      },
+      {
+        "step_number": 8,
+        "phase": "Action",
+        "content": "Calling Retention Proposal Generator tool to validate and compile strategy...",
+        "timestamp": "2026-06-12T21:26:39.504306"
+      },
+      {
+        "step_number": 9,
+        "phase": "Observation",
+        "content": "Retention proposal generated: 'Critical Retention: Premium Loyalty Save' (policy: COMPLIANT). Urgency: Immediate. Estimated retention lift: 30-45%. Actions: 5. Policy notes: All proposal parameters within corporate policy limits.",
+        "timestamp": "2026-06-12T21:26:39.504537"
+      }
+    ]
+  },
+  {
+    "customer_id": "DEMO-002",
+    "risk_level": "Low",
+    "churn_probability": 0.0016,
+    "strategy_title": "Loyalty Appreciation & Engagement",
+    "personalized_offer": "Send a loyalty appreciation message recognizing 60 months of partnership. Offer early access to new features and a referral bonus program ($25 credit per successful referral).",
+    "reasoning_summary": "Customer DEMO-002 assessed at 0.2% churn risk (Low). Key risk factors: Contract Two year, tenure, PaymentMethod Electronic check. Strategy: Loyalty Appreciation & Engagement (policy: COMPLIANT).",
+    "recommended_actions": [
+      "Send loyalty appreciation communication",
+      "Enroll in referral bonus program",
+      "Add to quarterly satisfaction survey list"
+    ],
+    "estimated_retention_lift": "5-10%",
+    "urgency": "This month",
+    "reasoning_trace": [
+      {
+        "step_number": 1,
+        "phase": "Thought",
+        "content": "I need to evaluate churn risk for customer DEMO-002. They are on a Two year contract with 60 months tenure, paying $45.00/month via Bank transfer (automatic). Internet service: DSL. I will call the Risk Predictor tool to get a quantitative churn score.",
+        "timestamp": "2026-06-12T21:26:42.043784"
+      },
+      {
+        "step_number": 2,
+        "phase": "Action",
+        "content": "Calling Risk Predictor tool with customer profile...",
+        "timestamp": "2026-06-12T21:26:42.044122"
+      },
+      {
+        "step_number": 3,
+        "phase": "Observation",
+        "content": "Risk Predictor returned: churn_probability=0.2%, risk_level=Low, top_factors=[Contract Two year, tenure, PaymentMethod Electronic check], model=Logistic Regression (confidence: High).",
+        "timestamp": "2026-06-12T21:26:42.054626"
+      },
+      {
+        "step_number": 4,
+        "phase": "Thought",
+        "content": "The churn probability is 0.2% (below 30% threshold). This is a low-risk customer. Context retrieval is not critical, but I'll generate a light-touch engagement strategy.",
+        "timestamp": "2026-06-12T21:26:42.055244"
+      },
+      {
+        "step_number": 5,
+        "phase": "Thought",
+        "content": "Now I have all the data. Generating a personalized retention strategy for this Low-risk customer using the Retention Proposal Generator tool (rule-based reasoning).",
+        "timestamp": "2026-06-12T21:26:42.055647"
+      },
+      {
+        "step_number": 6,
+        "phase": "Action",
+        "content": "Calling Retention Proposal Generator tool to validate and compile strategy...",
+        "timestamp": "2026-06-12T21:26:42.056412"
+      },
+      {
+        "step_number": 7,
+        "phase": "Observation",
+        "content": "Retention proposal generated: 'Loyalty Appreciation & Engagement' (policy: COMPLIANT). Urgency: This month. Estimated retention lift: 5-10%. Actions: 3. Policy notes: All proposal parameters within corporate policy limits.",
+        "timestamp": "2026-06-12T21:26:42.057567"
+      }
+    ]
+  },
+  {
+    "customer_id": "DEMO-003",
+    "risk_level": "Critical",
+    "churn_probability": 0.9615,
+    "strategy_title": "Critical Retention: Premium Loyalty Save",
+    "personalized_offer": "Offer an immediate 20% discount on monthly charges (reducing from $79.85 to $63.88/month) when the customer commits to a 12-month contract. Include 3 months of free premium streaming bundle as an added incentive.",
+    "reasoning_summary": "Customer DEMO-003 assessed at 96.2% churn risk (Critical). Key risk factors: PaymentMethod Electronic check, Contract Two year, InternetService Fiber optic. Context: Silver tier, LTV=$1377.41, 3 tickets, NPS=1/10. Strategy: Critical Retention: Premium Loyalty Save (policy: COMPLIANT).",
+    "recommended_actions": [
+      "Escalate to Senior Retention Specialist immediately",
+      "Apply 20% loyalty discount upon contract commitment",
+      "Schedule personal follow-up call within 24 hours",
+      "Flag account for executive review if customer declines first offer"
+    ],
+    "estimated_retention_lift": "30-45%",
+    "urgency": "Immediate",
+    "reasoning_trace": [
+      {
+        "step_number": 1,
+        "phase": "Thought",
+        "content": "I need to evaluate churn risk for customer DEMO-003. They are on a Month-to-month contract with 15 months tenure, paying $79.85/month via Electronic check. Internet service: Fiber optic. I will call the Risk Predictor tool to get a quantitative churn score.",
+        "timestamp": "2026-06-12T21:26:44.503751"
+      },
+      {
+        "step_number": 2,
+        "phase": "Action",
+        "content": "Calling Risk Predictor tool with customer profile...",
+        "timestamp": "2026-06-12T21:26:44.505003"
+      },
+      {
+        "step_number": 3,
+        "phase": "Observation",
+        "content": "Risk Predictor returned: churn_probability=96.2%, risk_level=Critical, top_factors=[PaymentMethod Electronic check, Contract Two year, InternetService Fiber optic], model=Logistic Regression (confidence: High).",
+        "timestamp": "2026-06-12T21:26:44.523661"
+      },
+      {
+        "step_number": 4,
+        "phase": "Thought",
+        "content": "The churn probability is 96.2% (>60% threshold). This is a Critical-risk customer. I need to understand WHY they might churn. Calling Context Retriever to fetch support tickets, contract status, and interaction history.",
+        "timestamp": "2026-06-12T21:26:44.524310"
+      },
+      {
+        "step_number": 5,
+        "phase": "Action",
+        "content": "Calling Context Retriever tool to fetch customer history...",
+        "timestamp": "2026-06-12T21:26:44.524465"
+      },
+      {
+        "step_number": 6,
+        "phase": "Observation",
+        "content": "Context retrieved: loyalty_tier=Silver, lifetime_value=$1377.41, account_status='Active - Open Tickets', payment_issues=1, NPS=1/10, tickets=3 recent tickets (2 unresolved). Notes: Month-to-month contract -- high flexibility, low switching cost.",
+        "timestamp": "2026-06-12T21:26:44.528169"
+      },
+      {
+        "step_number": 7,
+        "phase": "Thought",
+        "content": "Now I have all the data. Generating a personalized retention strategy for this Critical-risk customer using the Retention Proposal Generator tool (rule-based reasoning).",
+        "timestamp": "2026-06-12T21:26:44.528647"
+      },
+      {
+        "step_number": 8,
+        "phase": "Action",
+        "content": "Calling Retention Proposal Generator tool to validate and compile strategy...",
+        "timestamp": "2026-06-12T21:26:44.528977"
+      },
+      {
+        "step_number": 9,
+        "phase": "Observation",
+        "content": "Retention proposal generated: 'Critical Retention: Premium Loyalty Save' (policy: COMPLIANT). Urgency: Immediate. Estimated retention lift: 30-45%. Actions: 4. Policy notes: All proposal parameters within corporate policy limits.",
+        "timestamp": "2026-06-12T21:26:44.529337"
+      }
+    ]
+  }
+]
