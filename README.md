@@ -1,5 +1,6 @@
 # Customer Churn Prediction & Retention Agent
-
+[![Watch the Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/omGgEe95jlw
+)
 > **Microsoft Agents League Hackathon** | GIET Baniatangi / BPUT  
 > Built with Python, scikit-learn, FastAPI, and the ReAct Agent Framework
 
