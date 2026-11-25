@@ -1,0 +1,21 @@
+name: Docker smoke checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t local-project .
+      - run: docker run --rm --entrypoint python local-project -c 'import os; assert os.getuid() != 0'
+      - name: Runtime smoke test
+        run: |
+          docker run -d --name smoke -p 127.0.0.1:8000:8000 local-project
+          trap 'docker logs smoke; docker rm -f smoke' EXIT
+          curl --fail --retry 30 --retry-connrefused --retry-delay 2 http://127.0.0.1:8000/openapi.json -o /tmp/openapi.json
+          python -c 'import json; assert json.load(open("/tmp/openapi.json"))["paths"]'
