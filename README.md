@@ -75,7 +75,7 @@ cp .env.example .env
 # The agent works without it (rule-based fallback)
 ```
 
-## Model Performance
+## Model Performance (reported on synthetic data)
 
 | Metric | Target | Achieved |
 |--------|:------:|:--------:|
@@ -97,7 +97,7 @@ cp .env.example .env
 
 ```bash
 python -m pytest tests/ -v
-# 57 tests, 0 failures
+# Previously reported: 57 tests, 0 failures; rerun to verify.
 ```
 
 ## Project Structure
@@ -131,4 +131,10 @@ python -m pytest tests/ -v
 
 ## License
 
-MIT
+The project previously identified MIT as its intended license. A formal license file is pending confirmation of contributor rights.
+
+## Local development
+
+Use an isolated Python virtual environment. Keep API keys in a local `.env` file, never in Git. On Windows PowerShell, use `Copy-Item .env.example .env` for the optional configuration step.
+
+This is a demonstration using synthetic customer data, not a validated production retention system.
