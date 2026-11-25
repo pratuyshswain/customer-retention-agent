@@ -17,5 +17,5 @@ jobs:
         run: |
           docker run -d --name smoke -p 127.0.0.1:8000:8000 local-project
           trap 'docker logs smoke; docker rm -f smoke' EXIT
-          curl --fail --retry 30 --retry-connrefused --retry-delay 2 http://127.0.0.1:8000/openapi.json -o /tmp/openapi.json
+          curl --fail --retry 30 --retry-all-errors --retry-delay 2 --max-time 5 http://127.0.0.1:8000/openapi.json -o /tmp/openapi.json
           python -c 'import json; assert json.load(open("/tmp/openapi.json"))["paths"]'
